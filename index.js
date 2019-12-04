@@ -7,6 +7,7 @@ function gunPlugin (fastify, opts, next) {
   opts.options = opts.options || {}
 
   const gun = new Gun(opts.options)
+		gun.SEA = Gun.SEA;
 
   fastify
     .decorate('gun', gun)
